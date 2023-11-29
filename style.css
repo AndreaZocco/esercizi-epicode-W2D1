@@ -1,0 +1,97 @@
+body {
+  background-color: #0e0e0e;
+}
+
+.pinterestCard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  opacity: 0.3;
+}
+
+.pinterestCardIMG {
+  position: absolute;
+  border-radius: 20px;
+}
+
+.ironMaidenCover {
+  margin-top: 280px;
+  width: 280px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.ironMaidenCover:hover .divSaveButton {
+display: flex;
+}
+
+.ironMaidenCover:hover .divButtonList {
+display: flex;
+}
+
+.divSaveButton:hover {
+transform: translateY(10px); 
+transition: transform 0.5s ease;
+}
+  
+.divButtonList:hover {
+transform: translateY(-10px); 
+transition: transform 0.5s ease;
+}
+
+.IronMaidenImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.divSaveButton {
+  position: absolute;
+  top: 0;
+  right: -0;
+  padding-right: 15px;
+  padding-top: 15px;
+  z-index: 1;
+  display: none;
+}
+
+.saveButton {
+  border-radius: 25px;
+  width: 75px;
+  height: 45px;
+  background-color: #d32d2f;
+  border: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.divButtonList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 1;
+  display: none;
+}
+
+.button1 {
+  margin: 6px;
+  border-radius: 20px;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 15px;
+  font-weight: bold;
+}
