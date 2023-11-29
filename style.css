@@ -15,6 +15,8 @@ body {
 }
 
 .ironMaidenCover {
+  border-radius: 25px;
+  background-color: white;
   margin-top: 280px;
   width: 280px;
   height: 380px;
@@ -28,24 +30,6 @@ body {
   position: relative;
 }
 
-.ironMaidenCover:hover .divSaveButton {
-display: flex;
-}
-
-.ironMaidenCover:hover .divButtonList {
-display: flex;
-}
-
-.divSaveButton:hover {
-transform: translateY(10px); 
-transition: transform 0.5s ease;
-}
-  
-.divButtonList:hover {
-transform: translateY(-10px); 
-transition: transform 0.5s ease;
-}
-
 .IronMaidenImg {
   position: absolute;
   width: 100%;
@@ -53,14 +37,32 @@ transition: transform 0.5s ease;
   border-radius: 20px;
 }
 
+.divSaveButton, .divButtonList {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ironMaidenCover:hover .divSaveButton {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.ironMaidenCover:hover .divButtonList {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
 .divSaveButton {
   position: absolute;
   top: 0;
-  right: -0;
+  right: 0;
   padding-right: 15px;
   padding-top: 15px;
   z-index: 1;
-  display: none;
+  transform: translateY(-10px);
 }
 
 .saveButton {
@@ -75,15 +77,14 @@ transition: transform 0.5s ease;
 }
 
 .divButtonList {
-  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: 0.9;
   z-index: 1;
-  display: none;
+  transform: translateY(10px);
 }
 
 .button1 {
@@ -94,4 +95,8 @@ transition: transform 0.5s ease;
   padding-bottom: 7px;
   font-size: 15px;
   font-weight: bold;
+}
+
+.ironMaidenCover:hover .IronMaidenImg {
+  opacity: 0.8;
 }
